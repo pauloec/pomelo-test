@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+struct Request {
+    enum HttpHeaderField: String {
+        case contentType = "Content-Type"
+    }
+
+    enum ContentType: String {
+        case json = "application/json"
+    }
+}

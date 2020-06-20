@@ -14,8 +14,7 @@ import UIKit
  Object that defines the communication between View and ViewModel
  */
 protocol ControllerType: class {
-    associatedtype ViewModelType: ViewModelProtocol
-    
-    func configure(with viewModel: ViewModelType)
+    associatedtype ViewModel: ViewModelType
+    func configure(with viewModel: ViewModel)
 }
 

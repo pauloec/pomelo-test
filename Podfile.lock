@@ -1,3 +1,16 @@
-PODFILE CHECKSUM: 2e59ea1d8697b87c18d885a88cc3dd06977ad96c
+PODS:
+  - Core (0.1.0)
+
+DEPENDENCIES:
+  - Core (from `Modules/Core`)
+
+EXTERNAL SOURCES:
+  Core:
+    :path: Modules/Core
+
+SPEC CHECKSUMS:
+  Core: b4d49d33ea49694bc0bb003716776e3e238a9d1d
+
+PODFILE CHECKSUM: 1375dee7082db34caafaf39bdef5469bedecd5c4
 
 COCOAPODS: 1.11.2

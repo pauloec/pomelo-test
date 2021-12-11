@@ -10,7 +10,6 @@
 		87C48D6274CB1162006B6CBE /* Pods_Pomelo_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4951B6E8A8B5B38E79CFAF14 /* Pods_Pomelo_Test.framework */; };
 		A42CC2D02764F150005CA77A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42CC2CF2764F150005CA77A /* AppDelegate.swift */; };
 		A42CC2D22764F150005CA77A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42CC2D12764F150005CA77A /* SceneDelegate.swift */; };
-		A42CC2D42764F150005CA77A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42CC2D32764F150005CA77A /* ViewController.swift */; };
 		A42CC2D92764F152005CA77A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A42CC2D82764F152005CA77A /* Assets.xcassets */; };
 		A42CC2DC2764F152005CA77A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A42CC2DA2764F152005CA77A /* LaunchScreen.storyboard */; };
 		A42CC2E72764F152005CA77A /* Pomelo_TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42CC2E62764F152005CA77A /* Pomelo_TestTests.swift */; };
@@ -49,7 +48,6 @@
 		A42CC2CC2764F150005CA77A /* Pomelo Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pomelo Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A42CC2CF2764F150005CA77A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A42CC2D12764F150005CA77A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A42CC2D32764F150005CA77A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A42CC2D82764F152005CA77A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A42CC2DB2764F152005CA77A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A42CC2DD2764F152005CA77A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -109,7 +107,6 @@
 				2FCADAA171DD2BC5CBA79CB7 /* Pods-Pomelo TestTests.debug.xcconfig */,
 				984F6E6AE286BC1720325F77 /* Pods-Pomelo TestTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -140,7 +137,6 @@
 			children = (
 				A42CC2CF2764F150005CA77A /* AppDelegate.swift */,
 				A42CC2D12764F150005CA77A /* SceneDelegate.swift */,
-				A42CC2D32764F150005CA77A /* ViewController.swift */,
 				A42CC2D82764F152005CA77A /* Assets.xcassets */,
 				A42CC2DA2764F152005CA77A /* LaunchScreen.storyboard */,
 				A42CC2DD2764F152005CA77A /* Info.plist */,
@@ -176,6 +172,7 @@
 				A42CC2C82764F150005CA77A /* Sources */,
 				A42CC2C92764F150005CA77A /* Frameworks */,
 				A42CC2CA2764F150005CA77A /* Resources */,
+				8B3B82851737454C206124C5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -213,6 +210,7 @@
 				A42CC2E82764F153005CA77A /* Sources */,
 				A42CC2E92764F153005CA77A /* Frameworks */,
 				A42CC2EA2764F153005CA77A /* Resources */,
+				2199C58B20799C0C6841B911 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -338,6 +336,40 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		2199C58B20799C0C6841B911 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pomelo Test-Pomelo TestUITests/Pods-Pomelo Test-Pomelo TestUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pomelo Test-Pomelo TestUITests/Pods-Pomelo Test-Pomelo TestUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Pomelo Test-Pomelo TestUITests/Pods-Pomelo Test-Pomelo TestUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B3B82851737454C206124C5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pomelo Test/Pods-Pomelo Test-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pomelo Test/Pods-Pomelo Test-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Pomelo Test/Pods-Pomelo Test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		EF15C17F36A012E7F21E068F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -367,7 +399,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A42CC2D42764F150005CA77A /* ViewController.swift in Sources */,
 				A42CC2D02764F150005CA77A /* AppDelegate.swift in Sources */,
 				A42CC2D22764F150005CA77A /* SceneDelegate.swift in Sources */,
 			);

@@ -7,7 +7,9 @@ target 'Pomelo Test' do
 
   # Pods for Pomelo Test
 
-  pod 'Core', :path => 'Modules/Core'
+  pod 'Core',        :path => 'Modules/Core'
+  pod 'Network',     :path => 'Modules/Network'
+  pod 'StoreSearch', :path => 'Modules/StoreSearch'
 
   target 'Pomelo TestTests' do
     inherit! :search_paths

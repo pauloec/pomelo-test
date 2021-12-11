@@ -1,3 +1,28 @@
-PODFILE CHECKSUM: 2e59ea1d8697b87c18d885a88cc3dd06977ad96c
+PODS:
+  - Core (0.1.0)
+  - Network (0.1.0)
+  - StoreSearch (0.1.0):
+    - Core
+    - Network
+
+DEPENDENCIES:
+  - Core (from `Modules/Core`)
+  - Network (from `Modules/Network`)
+  - StoreSearch (from `Modules/StoreSearch`)
+
+EXTERNAL SOURCES:
+  Core:
+    :path: Modules/Core
+  Network:
+    :path: Modules/Network
+  StoreSearch:
+    :path: Modules/StoreSearch
+
+SPEC CHECKSUMS:
+  Core: b4d49d33ea49694bc0bb003716776e3e238a9d1d
+  Network: 19e09a95d410175752f818400741503e6256b3b7
+  StoreSearch: d16f5d6ef815c986953410fc71677d5cdd7a6a6b
+
+PODFILE CHECKSUM: 01f78364d40c22a9114eb1e650a4145a47b79213
 
 COCOAPODS: 1.11.2

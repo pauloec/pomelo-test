@@ -1,0 +1,6 @@
+framework module Pods_Pomelo_TestTests {
+  umbrella header "Pods-Pomelo TestTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -8,15 +8,13 @@
 import Core
 
 public class StoreSearchCoordinator: CoordinatorProtocol {
-    public init(navigationController: UINavigationController) {
-        super.init(navigationController: navigationController)
-    }
+    public var navigationController: UINavigationController
 
     required init(navigationController: UINavigationController) {
-        fatalError("init(navigationController:identifier:) has not been implemented")
+        self.navigationController = navigationController
     }
 
-    public override func start() {
-
+    public func start() {
+        print("start")
     }
 }

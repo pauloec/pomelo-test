@@ -1,6 +1,7 @@
 PODS:
   - Core (0.1.0)
-  - Network (0.1.0)
+  - Network (0.1.0):
+    - Core
   - StoreSearch (0.1.0):
     - Core
     - Network
@@ -20,7 +21,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Core: b4d49d33ea49694bc0bb003716776e3e238a9d1d
-  Network: 19e09a95d410175752f818400741503e6256b3b7
+  Network: 1d8c5d3522c58dc66b14738e61eec2958301a555
   StoreSearch: d16f5d6ef815c986953410fc71677d5cdd7a6a6b
 
 PODFILE CHECKSUM: 01f78364d40c22a9114eb1e650a4145a47b79213

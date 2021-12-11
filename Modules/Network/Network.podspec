@@ -12,8 +12,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '13.0'
   s.swift_version    = '5.0'
   s.source_files     = 'Network/**/*'
-  s.resource_bundles = {
-    'Network' => ['Assets/**/*.{png,xcassets,json,txt,storyboard,xib,xcdatamodeld,strings}']
-  }
+
+  s.dependency 'Core'
 
 end

@@ -6,7 +6,36 @@
 //
 
 
-final public class Binder<Element> {
+final public class PublishBinder<Element> {
+    public var listener: ((Element) -> Void)?
+
+    public func onNext(_ onNext: Element?) {
+        guard listener != nil else {
+            fatalError("Listener was not initialized")
+        }
+
+        guard let onNext = onNext else {
+            return
+        }
+
+        self.value = onNext
+    }
+
+    public init() { }
+
+    private var value: Element! {
+        didSet { listener?(value) }
+    }
+
+    public func bind(listener: ((Element) -> Void)?) {
+        self.listener = listener
+
+        guard let value = value else { return }
+        listener?(value)
+    }
+}
+
+final public class RelayBinder<Element> {
     public var listener: ((Element) -> Void)?
 
     public var value: Element {

@@ -20,9 +20,9 @@
   },
   "swift_versions": "5.0",
   "source_files": "Network/**/*",
-  "resource_bundles": {
-    "Network": [
-      "Assets/**/*.{png,xcassets,json,txt,storyboard,xib,xcdatamodeld,strings}"
+  "dependencies": {
+    "Core": [
+
     ]
   },
   "swift_version": "5.0"

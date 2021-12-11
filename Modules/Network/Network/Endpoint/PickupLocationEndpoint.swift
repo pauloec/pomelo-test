@@ -32,17 +32,19 @@ public struct PickupLocationResponse: Codable {
 }
 
 struct Pickup: Codable {
-    let idPickupLocation, idPartnetStore, idState: Int?
     let idCountry, idZone, idCarrier: Int
     let alias, address1, city, description: String
-    let company, address2, nearestBts, district, postcode, hours1, hours2, floorNumber, floormapImagePath, storeImagePath, phone: String?
+    let idPickupLocation, idState: Int?
+    let company, address2, nearestBts, district, postcode, hours1, hours2, floorNumber, phone, npsLink, feature: String?
     let latitude, longitude: Double?
-    let active: Bool
-    let type: PickupType
+    let images: Image
+    let hours: [String]?
+    let active, isNewLocation, isFeatured, isDefaultLocation: Bool?
+    let type: PickupType?
     let subType: PickupSubType?
-    let status: PickupStatus
+    let status: PickupStatus?
     let features: [PickupFeature]?
-    let paymentMethods: [PaymentMethodModel]
+    let paymentMethods: [PaymentMethod]?
 }
 
 enum PickupType: String, Codable {
@@ -67,7 +69,30 @@ struct PickupFeature: Codable {
     let type, description: String
 }
 
-struct PaymentMethodModel: Codable {
-    let idPartnerStore, idPaymentType: Int
-    let description, status: String
+struct PaymentMethod: Codable {
+    let idPartnerStore, idPaymentType, active, position: Int
+    let description: String
+    let isNew: Bool
+}
+
+struct Image: Codable {
+    let store: Store
+    let floormap: Floormap
+}
+
+struct Store: Codable {
+    let primary: Primary
+    let secondary: String
+}
+
+struct Primary: Codable {
+    let landscape: String
+    let fullLandscape: String
+    let portrait: String
+    let fullPortrait: String
+}
+
+struct Floormap: Codable {
+    let main: String
+    let zoomed: String
 }

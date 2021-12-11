@@ -15,7 +15,7 @@ enum ErrorKey: String {
 
 public class ErrorModel: Error {
     var messageKey: String
-    var message: String {
+    public var message: String {
         return messageKey.localized()
     }
 

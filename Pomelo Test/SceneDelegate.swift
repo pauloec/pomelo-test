@@ -24,9 +24,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         pub.listener = { result in
             switch result {
             case .success(let response):
-                print(response)
+                print("success")
+//                print(response)
             case .failure(let error):
-                print(error.localizedDescription)
+                print(error.message)
             }
         }
 

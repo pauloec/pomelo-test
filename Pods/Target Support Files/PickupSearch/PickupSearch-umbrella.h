@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double StoreSearchVersionNumber;
-FOUNDATION_EXPORT const unsigned char StoreSearchVersionString[];
+FOUNDATION_EXPORT double PickupSearchVersionNumber;
+FOUNDATION_EXPORT const unsigned char PickupSearchVersionString[];
 

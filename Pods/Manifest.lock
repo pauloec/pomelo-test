@@ -2,28 +2,28 @@ PODS:
   - Core (0.1.0)
   - Network (0.1.0):
     - Core
-  - StoreSearch (0.1.0):
+  - PickupSearch (0.1.0):
     - Core
     - Network
 
 DEPENDENCIES:
   - Core (from `Modules/Core`)
   - Network (from `Modules/Network`)
-  - StoreSearch (from `Modules/StoreSearch`)
+  - PickupSearch (from `Modules/PickupSearch`)
 
 EXTERNAL SOURCES:
   Core:
     :path: Modules/Core
   Network:
     :path: Modules/Network
-  StoreSearch:
-    :path: Modules/StoreSearch
+  PickupSearch:
+    :path: Modules/PickupSearch
 
 SPEC CHECKSUMS:
   Core: b4d49d33ea49694bc0bb003716776e3e238a9d1d
   Network: 1d8c5d3522c58dc66b14738e61eec2958301a555
-  StoreSearch: d16f5d6ef815c986953410fc71677d5cdd7a6a6b
+  PickupSearch: 2ba059e368fd7405dd6d5258f6773e314aaad185
 
-PODFILE CHECKSUM: d27fdc1c040775b3522185e7339549871910b3a6
+PODFILE CHECKSUM: a9cec68e55b44698ae75fd964c490952e43276fe
 
 COCOAPODS: 1.11.2

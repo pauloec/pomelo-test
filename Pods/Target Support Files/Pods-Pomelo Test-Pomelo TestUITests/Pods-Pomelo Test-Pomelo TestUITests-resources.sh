@@ -97,10 +97,10 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/Network/Network.bundle"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/PickupSearch/StoreSearch.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/Network/Network.bundle"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/PickupSearch/StoreSearch.bundle"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

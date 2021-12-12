@@ -1,4 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-Pomelo Test/Pods-Pomelo Test-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Core/Core.framework
 ${BUILT_PRODUCTS_DIR}/Network/Network.framework
-${BUILT_PRODUCTS_DIR}/StoreSearch/StoreSearch.framework
+${BUILT_PRODUCTS_DIR}/PickupSearch/PickupSearch.framework

@@ -8,10 +8,10 @@
 import UIKit
 
 extension UIView {
-    public func anchor(top: NSLayoutYAxisAnchor?,
-                       leading: NSLayoutXAxisAnchor?,
-                       bottom: NSLayoutYAxisAnchor?,
-                       trailing: NSLayoutXAxisAnchor?,
+    public func anchor(top: NSLayoutYAxisAnchor? = nil,
+                       leading: NSLayoutXAxisAnchor? = nil,
+                       bottom: NSLayoutYAxisAnchor? = nil,
+                       trailing: NSLayoutXAxisAnchor? = nil,
                        centerY: NSLayoutYAxisAnchor? = nil,
                        centerX: NSLayoutXAxisAnchor? = nil,
                        padding: UIEdgeInsets = .zero,

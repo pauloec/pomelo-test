@@ -1,6 +1,0 @@
-framework module StoreSearch {
-  umbrella header "StoreSearch-umbrella.h"
-
-  export *
-  module * { export * }
-}

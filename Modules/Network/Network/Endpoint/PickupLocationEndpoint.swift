@@ -8,7 +8,7 @@ import Foundation
 import Core
 
 public class PickupLocationEndpoint {
-    public class func pickupLocation(result: PublishBinder<Swift.Result<PickupLocationResponse, ErrorModel>>) {
+    public class func searchLocation(result: PublishBinder<Swift.Result<PickupLocationResponse, ErrorModel>>) {
         ServiceManager.shared.sendRequest(request: PickupLocationRequest(), result: result)
     }
 }
@@ -17,40 +17,34 @@ class PickupLocationRequest: RequestModel {
     override var path: String {
         return "/pickup-locations"
     }
-
-    override var headers: [String : String] {
-        [
-            "content-type": "application/json",
-            "x-api-key": "PMAK-6167d603741c320047d62485-04a7ac4007612666d5728c7d67961fbb39"
-        ]
-    }
 }
 
 public struct PickupLocationResponse: Codable {
-    let numberOfNewLocations: Int
-    let pickup: [Pickup]
+    public let pickup: [Pickup]
 }
 
-struct Pickup: Codable {
-    let idPickupLocation, idPartnetStore, idState: Int?
-    let idCountry, idZone, idCarrier: Int
-    let alias, address1, city, description: String
-    let company, address2, nearestBts, district, postcode, hours1, hours2, floorNumber, floormapImagePath, storeImagePath, phone: String?
-    let latitude, longitude: Double?
-    let active: Bool
-    let type: PickupType
-    let subType: PickupSubType?
-    let status: PickupStatus
-    let features: [PickupFeature]?
-    let paymentMethods: [PaymentMethodModel]
+public struct Pickup: Codable {
+    public let idCountry, idZone, idCarrier: Int
+    public let alias, address1, city, description: String
+    public let idPickupLocation, idState: Int?
+    public let company, address2, nearestBts, district, postcode, hours1, hours2, floorNumber, phone, npsLink, feature: String?
+    public let latitude, longitude: Double?
+    public let images: Image
+    public let hours: [String]?
+    public let active, isNewLocation, isFeatured, isDefaultLocation: Bool?
+    public let type: PickupType?
+    public let subType: PickupSubType?
+    public let status: PickupStatus?
+    public let features: [PickupFeature]?
+    public let paymentMethods: [PaymentMethod]?
 }
 
-enum PickupType: String, Codable {
+public enum PickupType: String, Codable {
     case pickup = "pickup"
     case partner = "partner"
 }
 
-enum PickupSubType: String, Codable {
+public enum PickupSubType: String, Codable {
     case store = "store"
     case csr = "csr"
     case skybox = "skybox"
@@ -58,16 +52,39 @@ enum PickupSubType: String, Codable {
     case office = "office"
 }
 
-enum PickupStatus: String, Codable {
+public enum PickupStatus: String, Codable {
     case active = "active"
     case temporaryDisable = "temporary-disable"
 }
 
-struct PickupFeature: Codable {
-    let type, description: String
+public struct PickupFeature: Codable {
+    public let type, description: String
 }
 
-struct PaymentMethodModel: Codable {
-    let idPartnerStore, idPaymentType: Int
-    let description, status: String
+public struct PaymentMethod: Codable {
+    public let idPartnerStore, idPaymentType, active, position: Int
+    public let description: String
+    public let isNew: Bool
+}
+
+public struct Image: Codable {
+    public let store: Store
+    public let floormap: Floormap
+}
+
+public struct Store: Codable {
+    public let primary: Primary
+    public let secondary: String
+}
+
+public struct Primary: Codable {
+    public let landscape: String
+    public let fullLandscape: String
+    public let portrait: String
+    public let fullPortrait: String
+}
+
+public struct Floormap: Codable {
+    public let main: String
+    public let zoomed: String
 }

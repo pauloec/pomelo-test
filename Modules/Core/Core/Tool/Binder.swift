@@ -5,9 +5,13 @@
 //  Created by Paulo Correa on 11/12/2021.
 //
 
-
 final public class PublishBinder<Element> {
-    public var listener: ((Element) -> Void)?
+    public init() { }
+
+    private var listener: ((Element) -> Void)?
+    private var value: Element! {
+        didSet { listener?(value) }
+    }
 
     public func onNext(_ onNext: Element?) {
         guard listener != nil else {
@@ -21,12 +25,6 @@ final public class PublishBinder<Element> {
         self.value = onNext
     }
 
-    public init() { }
-
-    private var value: Element! {
-        didSet { listener?(value) }
-    }
-
     public func bind(listener: ((Element) -> Void)?) {
         self.listener = listener
 
@@ -36,7 +34,7 @@ final public class PublishBinder<Element> {
 }
 
 final public class RelayBinder<Element> {
-    public var listener: ((Element) -> Void)?
+    private var listener: ((Element) -> Void)?
 
     public var value: Element {
         didSet { listener?(value) }

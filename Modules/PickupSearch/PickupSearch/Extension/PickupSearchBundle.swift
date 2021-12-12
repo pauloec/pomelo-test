@@ -7,27 +7,27 @@
 
 import Foundation
 
-public enum StoreSearchFramework {
+public enum PickupSearchFramework {
     public static let useResourceBundles = true
-    public static let bundleName = "StoreSearch.bundle"
+    public static let bundleName = "PickupSearch.bundle"
 }
 
 private class GetBundle {}
 
 extension Bundle {
-    public class func StoreSearchResourceBundle() -> Bundle {
+    public class func PickupSearchResourceBundle() -> Bundle {
         let framework = Bundle(for: GetBundle.self)
-        guard StoreSearchFramework.useResourceBundles else {
+        guard PickupSearchFramework.useResourceBundles else {
             return framework
         }
         guard let resourceBundleURL = framework.url(
-            forResource: StoreSearchFramework.bundleName,
+            forResource: PickupSearchFramework.bundleName,
             withExtension: nil)
         else {
-            fatalError("\(StoreSearchFramework.bundleName) not found!")
+            fatalError("\(PickupSearchFramework.bundleName) not found!")
         }
         guard let resourceBundle = Bundle(url: resourceBundleURL) else {
-            fatalError("Cannot access \(StoreSearchFramework.bundleName)")
+            fatalError("Cannot access \(PickupSearchFramework.bundleName)")
         }
         return resourceBundle
     }
@@ -35,6 +35,6 @@ extension Bundle {
 
 extension UIImage {
     class func image(named: String) -> UIImage {
-        return UIImage(named: named, in: Bundle.StoreSearchResourceBundle(), compatibleWith: nil) ?? UIImage()
+        return UIImage(named: named, in: Bundle.PickupSearchResourceBundle(), compatibleWith: nil) ?? UIImage()
     }
 }

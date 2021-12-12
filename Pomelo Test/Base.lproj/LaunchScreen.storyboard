@@ -2,9 +2,9 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,20 +16,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pomelo-logo" translatesAutoresizingMaskIntoConstraints="NO" id="Uss-cE-Xp9">
-                                <rect key="frame" x="0.0" y="337.5" width="414" height="221"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppLogo" translatesAutoresizingMaskIntoConstraints="NO" id="0fz-ja-VxE">
+                                <rect key="frame" x="0.0" y="241" width="414" height="414"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="Uss-cE-Xp9" secondAttribute="height" multiplier="15:8" id="nhp-O4-2tF"/>
+                                    <constraint firstAttribute="width" secondItem="0fz-ja-VxE" secondAttribute="height" multiplier="1:1" id="S1a-G6-rqL"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Uss-cE-Xp9" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="2Z8-Vo-Bnq"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Uss-cE-Xp9" secondAttribute="trailing" id="56m-kD-6ZF"/>
-                            <constraint firstItem="Uss-cE-Xp9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="D9i-ZI-jPY"/>
-                            <constraint firstItem="Uss-cE-Xp9" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="dek-vU-EFz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0fz-ja-VxE" secondAttribute="trailing" id="6di-g4-FAR"/>
+                            <constraint firstItem="0fz-ja-VxE" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="QVz-NP-7Yj"/>
+                            <constraint firstItem="0fz-ja-VxE" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Zd6-gp-cif"/>
+                            <constraint firstItem="0fz-ja-VxE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lMi-ih-OmG"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -39,9 +39,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="pomelo-logo" width="512" height="288"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="AppLogo" width="500" height="500"/>
     </resources>
 </document>

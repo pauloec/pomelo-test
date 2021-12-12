@@ -13,7 +13,14 @@ struct ResponseModel<T: Codable>: Codable {
     var error: ErrorModel {
         return ErrorModel(message)
     }
-    var rawData: Data?
+    var rawData: Data? {
+        didSet {
+            guard let rawData = rawData else { return }
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            data = try? decoder.decode(T.self, from: rawData)
+        }
+    }
     var data: T?
     var json: String? {
         guard let rawData = rawData else { return nil }
@@ -29,7 +36,7 @@ struct ResponseModel<T: Codable>: Codable {
     init(from decoder: Decoder) throws {
         let keyedContainer = try decoder.container(keyedBy: CodingKeys.self)
 
-        isSuccess = (try? keyedContainer.decode(Bool.self, forKey: CodingKeys.isSuccess)) ?? false
+        isSuccess = (try? keyedContainer.decode(Bool.self, forKey: CodingKeys.isSuccess)) ?? true
         message = (try? keyedContainer.decode(String.self, forKey: CodingKeys.message)) ?? ""
         data = try? keyedContainer.decode(T.self, forKey: CodingKeys.data)
     }

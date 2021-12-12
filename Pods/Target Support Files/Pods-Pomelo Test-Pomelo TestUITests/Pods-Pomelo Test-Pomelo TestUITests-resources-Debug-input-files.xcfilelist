@@ -1,2 +1,2 @@
 ${PODS_ROOT}/Target Support Files/Pods-Pomelo Test-Pomelo TestUITests/Pods-Pomelo Test-Pomelo TestUITests-resources.sh
-${PODS_CONFIGURATION_BUILD_DIR}/Network/Network.bundle
+${PODS_CONFIGURATION_BUILD_DIR}/PickupSearch/StoreSearch.bundle

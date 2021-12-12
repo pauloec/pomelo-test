@@ -52,6 +52,9 @@ extension RequestModel {
             request.addValue(header.value, forHTTPHeaderField: header.key)
         }
 
+        request.addValue("application/json", forHTTPHeaderField: "content-type")
+        request.addValue("PMAK-6167d603741c320047d62485-04a7ac4007612666d5728c7d67961fbb39", forHTTPHeaderField: "x-api-key")
+
         if method == RequestHTTPMethod.post {
             do {
                 request.httpBody = try JSONSerialization.data(withJSONObject: body, options: JSONSerialization.WritingOptions.prettyPrinted)

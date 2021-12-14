@@ -12,9 +12,10 @@
 		A42CC2D22764F150005CA77A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42CC2D12764F150005CA77A /* SceneDelegate.swift */; };
 		A42CC2D92764F152005CA77A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A42CC2D82764F152005CA77A /* Assets.xcassets */; };
 		A42CC2DC2764F152005CA77A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A42CC2DA2764F152005CA77A /* LaunchScreen.storyboard */; };
-		A42CC2E72764F152005CA77A /* Pomelo_TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42CC2E62764F152005CA77A /* Pomelo_TestTests.swift */; };
 		A42CC2F12764F153005CA77A /* Pomelo_TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42CC2F02764F153005CA77A /* Pomelo_TestUITests.swift */; };
 		A42CC2F32764F153005CA77A /* Pomelo_TestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42CC2F22764F153005CA77A /* Pomelo_TestUITestsLaunchTests.swift */; };
+		A42CC3302769412D005CA77A /* PickupSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42CC32F2769412D005CA77A /* PickupSearchTests.swift */; };
+		A42CC33227694497005CA77A /* PickupSearchCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42CC33127694497005CA77A /* PickupSearchCellTests.swift */; };
 		A74A061AAB152E3BEB764198 /* Pods_Pomelo_Test_Pomelo_TestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6208C17DE0558FB389405184 /* Pods_Pomelo_Test_Pomelo_TestUITests.framework */; };
 		CD083EF7038E9D136E9B80BA /* Pods_Pomelo_TestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54DC2FBF358F82B6A632A8AF /* Pods_Pomelo_TestTests.framework */; };
 /* End PBXBuildFile section */
@@ -52,10 +53,11 @@
 		A42CC2DB2764F152005CA77A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A42CC2DD2764F152005CA77A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A42CC2E22764F152005CA77A /* Pomelo TestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pomelo TestTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A42CC2E62764F152005CA77A /* Pomelo_TestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pomelo_TestTests.swift; sourceTree = "<group>"; };
 		A42CC2EC2764F153005CA77A /* Pomelo TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pomelo TestUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A42CC2F02764F153005CA77A /* Pomelo_TestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pomelo_TestUITests.swift; sourceTree = "<group>"; };
 		A42CC2F22764F153005CA77A /* Pomelo_TestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pomelo_TestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A42CC32F2769412D005CA77A /* PickupSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickupSearchTests.swift; sourceTree = "<group>"; };
+		A42CC33127694497005CA77A /* PickupSearchCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickupSearchCellTests.swift; sourceTree = "<group>"; };
 		E87F7088F86CFC22B790B582 /* Pods-Pomelo Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pomelo Test.debug.xcconfig"; path = "Target Support Files/Pods-Pomelo Test/Pods-Pomelo Test.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,7 +149,8 @@
 		A42CC2E52764F152005CA77A /* Pomelo TestTests */ = {
 			isa = PBXGroup;
 			children = (
-				A42CC2E62764F152005CA77A /* Pomelo_TestTests.swift */,
+				A42CC32F2769412D005CA77A /* PickupSearchTests.swift */,
+				A42CC33127694497005CA77A /* PickupSearchCellTests.swift */,
 			);
 			path = "Pomelo TestTests";
 			sourceTree = "<group>";
@@ -408,7 +411,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A42CC2E72764F152005CA77A /* Pomelo_TestTests.swift in Sources */,
+				A42CC3302769412D005CA77A /* PickupSearchTests.swift in Sources */,
+				A42CC33227694497005CA77A /* PickupSearchCellTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -631,7 +635,6 @@
 			baseConfigurationReference = 2FCADAA171DD2BC5CBA79CB7 /* Pods-Pomelo TestTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FKL6U359R6;
@@ -657,7 +660,6 @@
 			baseConfigurationReference = 984F6E6AE286BC1720325F77 /* Pods-Pomelo TestTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FKL6U359R6;
